@@ -7,7 +7,7 @@ const strategies  = {
 };
 
 // 抽象验证类
-export default class Validator {
+class Validator {
   constructor() {
     this.validates = []; // 存储所有的验证规则
   }
@@ -31,14 +31,4 @@ export default class Validator {
   }
 }
 
-// example
-const validator = new Validator(); // 生成验证实例
-const value = 2; // 输入的值
-const rules = {strategy: 'isEmpty', errMsg: '不能为空'}; // 定义规则
-validator.add(value, rules); // 注册验证
-const errMsg = validator.start(); // 开始验证
 
-// 如果有错误
-if (errMsg) {
-  // do error
-}
