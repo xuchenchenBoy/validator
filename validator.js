@@ -2,6 +2,7 @@
 // 具体策略类,用于定义验证方法
 const strategies  = {
   isEmpty: (value, errMsg) => {
+    if (typeof value !== 'string') return true;
     return value ? false : true;
   }
 };
